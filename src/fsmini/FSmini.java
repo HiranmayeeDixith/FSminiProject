@@ -106,7 +106,7 @@ public class FSmini {
         return max;
     }
     static void reads(){
-        System.out.println("max="+max());
+        
         sid=max()+1;
         s.id=""+sid;
         s.sname=stname.getText();
