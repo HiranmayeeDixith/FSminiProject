@@ -41,7 +41,6 @@ public class index extends javax.swing.JFrame {
         username = new javax.swing.JTextField();
         lpassword = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,7 +50,7 @@ public class index extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(239, 152, 21));
         jLabel1.setText("LOGIN here");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(80, 70, 310, 60);
+        jLabel1.setBounds(60, 80, 310, 60);
 
         jLabel4.setFont(new java.awt.Font("Gabriola", 3, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 51, 0));
@@ -93,7 +92,7 @@ public class index extends javax.swing.JFrame {
             }
         });
         getContentPane().add(username);
-        username.setBounds(230, 270, 210, 30);
+        username.setBounds(230, 200, 210, 30);
 
         lpassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,15 +100,13 @@ public class index extends javax.swing.JFrame {
             }
         });
         getContentPane().add(lpassword);
-        lpassword.setBounds(230, 200, 210, 30);
+        lpassword.setBounds(230, 270, 210, 30);
 
         jLabel3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 153, 0));
         jLabel3.setText("Password:");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(80, 270, 99, 31);
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(280, 10, 10, 10);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fsmini/Webp.net-resizeimage_1.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
@@ -176,7 +173,6 @@ public class index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton login;
     public static javax.swing.JPasswordField lpassword;
     private javax.swing.JButton registration;

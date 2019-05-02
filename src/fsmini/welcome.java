@@ -42,11 +42,11 @@ public class welcome extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Georgia", 3, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(96, 222, 222));
         jLabel1.setText("Welcome to the Music Acadamy");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(250, 50, 810, 55);
+        jLabel1.setBounds(250, 50, 810, 56);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Gabriola", 1, 48)); // NOI18N

@@ -145,7 +145,7 @@ public class FSmini {
         File file = new File("Z:\\6th semester\\FS miniproject\\student.txt");
                 
         try{
-        //System.out.println(ind[0]);
+        
         if(ind[0].equals("0")){
         try{
             
@@ -154,7 +154,7 @@ public class FSmini {
             
             bw.write(buffer);
             bw.newLine();
-            System.out.println("before addition:"+num);
+           
             st[num]=new student();
             st[num].sname=s.sname;
             st[num].password=s.password;
@@ -165,7 +165,7 @@ public class FSmini {
             st[num].id=s.id;
             num++;
             
-            System.out.println("after addition:"+num);
+            
         }catch (IOException e) {
 
             e.printStackTrace();
@@ -187,10 +187,11 @@ public class FSmini {
                     st[j].id=s.id;
                     
                     
-                    for(int p=2;p<c;p++){
+                    for(int p=2;p<c-1;p++){
                         ind[p-1]=ind[p];
                     }
                     c--;
+                    
                     ind[0]=""+(c-1); 
                     update();
                     break;
@@ -231,12 +232,11 @@ public class FSmini {
         Long cyear=Long.parseLong(cparts[0]);
         Long cmonth=Long.parseLong(cparts[1]);
         Long cday=Long.parseLong(cparts[2]);
+        flag=false;
         for(int j=0;j<num;j++){
             Integer i=Integer.parseInt(st[j].id);
-            Integer z=new Integer(sid);
-            System.out.println("i="+i);
-            System.out.println("z="+z);
-            System.out.println(i.equals(z));
+            Integer z=new Integer(s.id);
+            
             if(i.equals(z)){
                 flag=true;
                 break;
@@ -246,7 +246,7 @@ public class FSmini {
            if(flag==false){
                 try{
                 
-                System.out.println("entry 1");
+               
                 writes();
                 packf();
                 return;
@@ -259,13 +259,13 @@ public class FSmini {
         
         
         if(month==cmonth-1){
-            System.out.println("entry 2");
+            
             packf();
             
         }
             
         else if(year==cyear-1&&cmonth==1&&month==12){
-            System.out.println("entry 3");
+            
             packf();
         }
         else
@@ -317,7 +317,7 @@ public class FSmini {
     static void unpacks(){
         File file = new File("Z:\\6th semester\\FS miniproject\\student.txt"); 
         String line=null;
-        
+        c=0;
         num=0;
         File index = new File("Z:\\6th semester\\FS miniproject\\index.txt");
         
@@ -332,16 +332,16 @@ public class FSmini {
             ind[c]=sc1.nextLine();
             c++;
         }
-        System.out.println("c in unpack"+c);
+        
         while (sc.hasNextLine()){ 
             line=sc.nextLine();
         try{
             String[] items=line.split("\\|");
-            System.out.println(line+" "+items[6]+" ");
+            
             if(items!=null){
             st[num]=new student(items[0],items[1],items[2],items[3],items[4],items[5],items[6]);
             num++;
-            System.out.print("num in unpacks:"+num);
+           
             }
             }catch(NullPointerException n){
                 n.printStackTrace();
@@ -473,9 +473,9 @@ public class FSmini {
         try{
             fw = new FileWriter(file,false);
             bw = new BufferedWriter(fw);
-            System.out.println("num in update"+num);
+            
             for(int i=0;i<num;i++){
-                System.out.println(st[i].sname);
+               
                 buffer=st[i].id+"|"+st[i].sname+"|"+st[i].password+"|"+st[i].phno+"|"+st[i].batch+"|"+st[i].fee+"|"+st[i].date;
                 bw.write(buffer);
                 bw.newLine();
@@ -483,7 +483,7 @@ public class FSmini {
             
             fw1 = new FileWriter(index,false);
             bw1 = new BufferedWriter(fw1);
-            System.out.println("c="+c);
+            
             for(int q=0;q<c;q++){
             bw1.write(ind[q]);
             bw1.newLine();
@@ -513,7 +513,11 @@ public class FSmini {
             }
             
         }
-        System.out.println("c in del"+c);
+        
+        JOptionPane.showMessageDialog(null, "Your details are deleted");
+        welcome w=new welcome();
+        w.setVisible(true);
+        
     }
     /**
      * @param args the command line arguments
